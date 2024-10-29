@@ -1,0 +1,186 @@
+* {
+	margin: 0;
+	padding: 0;
+	font-family: none;
+}
+
+.container {
+	width: 80%;
+	text-align: center;
+	max-width: 700px;
+	background-color: #0003;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	border: 1px solid #000;
+}
+
+
+h1 {
+	margin: 0 0 30px 0;
+	font-size: 50px;
+	color: #61ff12;
+}
+
+/* input information */
+
+input[type='text'] {
+	text-transform: capitalize;
+}
+
+.input_info {
+	color: blue;
+	font-size: 25px;
+	border-radius: 10px;
+	margin: 0 10px 10px 0;
+	box-shadow: 1px 1px 5px #4d00d5;
+	padding: 5px;
+	width: 80%;
+	text-align: center;
+}
+
+.input_info:last-of-type {
+	margin-right: 7px;
+}
+
+/* الغاء الزيادة والنقصان في ادخال رقم الهاتف */
+/* إذا كنت تريد تطبيق الأسلوب عند hover */
+input[type="number"]:hover::-webkit-inner-spin-button,
+input[type="number"]:hover::-webkit-outer-spin-button {
+	display: none;
+}
+
+/* إذا كنت تريد تطبيق الأسلوب عند focus */
+input[type="number"]:focus::-webkit-inner-spin-button,
+input[type="number"]:focus::-webkit-outer-spin-button {
+	display: none;
+}
+
+/* create account and (exit , enter) */
+
+.image_container {
+	position: absolute;
+	width: 100%;
+}
+
+.image_container img {
+	width: 100%;
+	filter: blur(1px);
+	height: auto;
+}
+
+.signUp {
+	display: grid;
+	grid-template-areas:
+		"sign sign sign "
+		"back enter enter";
+	max-width: 335px;
+	margin: 10px auto;
+}
+
+.signUp a.first_link {
+	grid-area: sign;
+}
+
+.signUp .createAccount {
+	margin-bottom: 25px;
+	padding: 10px;
+	font-size: 25px;
+	color: green;
+	background: white;
+	border-radius: 20px;
+	width: 100%;
+	cursor: pointer;
+	font-weight: bold;
+	text-align: center;
+}
+
+.signUp .createAccount:hover {
+	background-color: #03af90;
+	color: #fff;
+}
+
+.signUp a.second_link,
+.signUp a.third_link {
+	border-radius: 20px;
+	cursor: pointer;
+	font-weight: bold;
+	padding: 10px;
+	color: white;
+	text-decoration: none;
+	font-size: 25px;
+}
+
+.signUp a.second_link:hover,
+.signUp a.third_link:hover {
+	color: azure;
+	border: 1px solid black;
+}
+
+
+.signUp a.second_link {
+	grid-area: back;
+	margin: 0 5px;
+	background: #f00;
+
+}
+
+.signUp a.third_link {
+	grid-area: enter;
+	background: blue;
+}
+
+/* font awesome style*/
+
+.i_font {
+	font-size: 25px;
+	border: 1px solid #673AB7;
+	padding: 10px;
+	max-width: 20%;
+	color: #00ff;
+}
+
+.i_pass {
+	color: #f00;
+}
+
+/* BackEnd Style */
+
+.pop_up_error {
+	color: #ff0000;
+	font-size: 26px;
+	font-weight: bold;
+	margin-bottom: 5px;
+}
+
+.pop_up_error_login {
+	color: #ff0000;
+	font-size: 23px;
+	font-weight: bold;
+	margin-top: 60px;
+}
+
+.body-pop-up-already_login {
+	background-color: #fefcfb;
+}
+
+.pop_up_already_login {
+	color: #f00;
+	text-align: center;
+}
+
+.pop_up_already_login img {
+	width: 350px;
+}
+
+.pop_up_sigup {
+	text-align: center;
+	color: #008800;
+}
+
+.pop_up_p {
+	font-size: 50px;
+	font-weight: bold;
+}
+
