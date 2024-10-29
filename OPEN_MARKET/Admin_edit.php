@@ -27,7 +27,7 @@ global $Alex;
 
 // select the item from data base 
 @$hussein = $_GET['T'];
-$items = "SELECT * FROM add_objects WHERE Object_token = '$hussein'";
+$items = "SELECT * FROM add_objects WHERE object_token = '$hussein'";
 $Run = mysqli_query($Alex, $items);
 $Row = mysqli_fetch_array($Run);
 
@@ -66,25 +66,25 @@ if (isset($_POST['add_object'])) {
         if ($image != '') {
             move_uploaded_file($image_copy, "copy_img/$post_img");
 
-            $oldImage = "copy_img/" . $Row['Object_img'];
+            $oldImage = "copy_img/" . $Row['object_img'];
 
             // check if the last file is empty or not
             if (is_file($oldImage)) {
                 unlink($oldImage);
             }
         } else {
-            $post_img = $Row['Object_img'];
+            $post_img = $Row['object_img'];
         }
 
 
         $data_edit = "UPDATE add_objects
         SET
-            Object_name = '$post_name',
-            Object_price = '$post_price',
-            Object_img = '$post_img',
-            Object_info = '$post_desc'
+            object_name = '$post_name',
+            object_price = '$post_price',
+            object_img = '$post_img',
+            object_info = '$post_desc'
 
-        WHERE Object_token = '$hussein'";
+        WHERE object_token = '$hussein'";
 
 
         if (mysqli_query($Alex, $data_edit)) {
@@ -131,13 +131,13 @@ if (isset($_POST['add_object'])) {
     </div>
     <form action="" method="post" enctype="multipart/form-data">
         <div class="name_price">
-            <img width="200px" src="copy_img/<?php echo @$Row['Object_img']; ?>" /><br>
+            <img width="200px" src="copy_img/<?php echo @$Row['object_img']; ?>" /><br>
             <?php echo @$Error; ?>
-            <input class="enter_name_price" type="text" placeholder="أسم المنتج" name="object_name" value="<?php echo @$Row['Object_name']; ?>">
-            <input class="enter_name_price" type="text" placeholder=" أكتب السعر" name="object_price" value="<?php echo @$Row['Object_price']; ?>">
+            <input class="enter_name_price" type="text" placeholder="أسم المنتج" name="object_name" value="<?php echo @$Row['object_name']; ?>">
+            <input class="enter_name_price" type="text" placeholder=" أكتب السعر" name="object_price" value="<?php echo @$Row['object_price']; ?>">
             <br>
             <input type="file" class="upload" name="upload_image">
-            <textarea name="object_desc" class="description" cols="35" rows="10" placeholder="الوصف"><?php echo @$Row['Object_info']; ?></textarea>
+            <textarea name="object_desc" class="description" cols="35" rows="10" placeholder="الوصف"><?php echo @$Row['object_info']; ?></textarea>
             <input type="submit" value="تعديل المنتج" class="add_object" name="add_object">
         </div>
     </form>

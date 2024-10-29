@@ -58,7 +58,7 @@ if (isset($_POST['add_object'])) {
                     <p class="pop_up_p">عذرا الامتداد غير مسموح </p>
                 </div>
             </body>
-            <meta http-equiv="refresh" content="3 , url=AdminAddObject.php"/>
+            <meta http-equiv="refresh" content="3 , url=AdminAddobject.php"/>
             ';
         exit();
         }
@@ -91,7 +91,7 @@ if (isset($_POST['add_object'])) {
                     <img src="img/giphy.gif" />
                     <p class="pop_up_p">تم اضافة المنتج بنجاح</p>
                 </div>
-                <meta http-equiv="refresh" content="3 , url=AdminAddObject.php"/>
+                <meta http-equiv="refresh" content="3 , url=AdminAddobject.php"/>
                 ';
             exit();
         }

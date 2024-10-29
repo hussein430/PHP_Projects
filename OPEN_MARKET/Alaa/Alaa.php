@@ -8,9 +8,7 @@
 $Alex = mysqli_connect("localhost", "root", "", "Learn");
 
 if (!$Alex) {
-    die("Error in the connection: " . mysqli_connect_error());
-} else {
-    echo "Connection successful!";
+    die("Connection failed: " . mysqli_connect_error());
 }
 
 ?>

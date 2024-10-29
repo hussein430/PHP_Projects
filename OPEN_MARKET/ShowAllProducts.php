@@ -25,7 +25,7 @@ $Run = mysqli_query($Alex, $hussein);
 @$select = $_GET['T'];
 
 if (@$_GET['d'] == 'd') {
-    $delete = "DELETE FROM add_objects WHERE Object_token = '$select' ";
+    $delete = "DELETE FROM add_objects WHERE object_token = '$select' ";
     $run = mysqli_query($Alex, $delete);
     echo '
     <link rel="stylesheet" href="css/style.css">
@@ -87,11 +87,11 @@ if (@$_GET['d'] == 'd') {
                     echo '
                             <tr id="row_info">
                             <td>' . $count++ . '</td>
-                            <td><img width=200 src="copy_img/' . $Row['Object_img'] . '" alt="image"></td>
-                            <td>' . $Row['Object_name'] . '</td>
-                            <td>' . $Row['Object_price'] . '</td>
-                            <td><a href="Admin_edit.php?T=' . $Row['Object_token'] . '" target="_blank"><i class="fa-solid fa-pen-to-square edit_icon"></i></a></td>
-                            <td><a href="ShowAllProducts.php?d=d&T=' . $Row['Object_token'] . '"><i class="fa-solid fa-trash delete_icon"></i></a></td>
+                            <td><img width=200 src="copy_img/' . $Row['object_img'] . '" alt="image"></td>
+                            <td>' . $Row['object_name'] . '</td>
+                            <td>' . $Row['object_price'] . '</td>
+                            <td><a href="Admin_edit.php?T=' . $Row['object_token'] . '" target="_blank"><i class="fa-solid fa-pen-to-square edit_icon"></i></a></td>
+                            <td><a href="ShowAllProducts.php?d=d&T=' . $Row['object_token'] . '"><i class="fa-solid fa-trash delete_icon"></i></a></td>
                             </tr>
                         ';
                 };
